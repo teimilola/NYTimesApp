@@ -4,4 +4,9 @@
     <string name="hint">Enter search query</string>
     <string name="search">Search</string>
     <string name="title_activity_article">ArticleActivity</string>
+    <string name="news_desk">News Desk Values </string>
+    <string name="sort_order">Sort Order</string>
+    <string name="begin_date"> Begin Date</string>
+    <string name="btn_save">Save</string>
+    <string name="sort_prompt">Choose...</string>
 </resources>

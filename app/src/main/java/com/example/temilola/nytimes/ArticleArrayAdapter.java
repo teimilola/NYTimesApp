@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
 
 import java.util.List;
 
@@ -28,9 +28,11 @@ public class ArticleArrayAdapter extends ArrayAdapter<Article> {
         Article article = this.getItem(position);
         //check to see if existing view is being re-used
         //not using a recycled view-> inflate the layout
-        if (convertView== null){
+        if (convertView == null){
             LayoutInflater inflater= LayoutInflater.from(getContext());
             convertView= inflater.inflate(R.layout.item_article_result, parent, false);
+           // holder = new ViewHolder(convertView);
+           // convertView.setTag(holder);
         }
         //find the image view
         ImageView imageView= (ImageView) convertView.findViewById(R.id.ivImage);
@@ -47,10 +49,12 @@ public class ArticleArrayAdapter extends ArrayAdapter<Article> {
         String thumbNail= article.getThumbNail();
 
         if(!TextUtils.isEmpty(thumbNail)){
-            Picasso.with(getContext()).load(thumbNail).into(imageView);
+            Glide.with(getContext()).load(thumbNail).into(imageView);
         }
 
         return convertView;
     }
+
+
 }
 

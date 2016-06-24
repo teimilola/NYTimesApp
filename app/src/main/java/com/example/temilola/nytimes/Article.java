@@ -66,16 +66,25 @@ public class Article implements Parcelable{
 
     public Article(JSONObject jsonObject){
         try{
-            this.webUrl= jsonObject.getString("web_url");
-            this.headline= jsonObject.getJSONObject("headline").getString("main");
-
             JSONArray multimedia= jsonObject.getJSONArray("multimedia");
-
-            if(multimedia.length() >0){
-                JSONObject multimediaJson= multimedia.getJSONObject(0);
-                this.thumbNail= "http://www.nytimes.com/" + multimediaJson.getString("url");
+            if(jsonObject.has("web_url")) {
+                this.webUrl = jsonObject.getString("web_url");
+                this.headline = jsonObject.getJSONObject("headline").getString("main");
+                if(multimedia.length() >0){
+                    JSONObject multimediaJson= multimedia.getJSONObject(0);
+                    this.thumbNail= "http://www.nytimes.com/" + multimediaJson.getString("url");
+                }else{
+                    this.thumbNail= "";
+                }
             }else{
-                this.thumbNail= "";
+                this.webUrl=jsonObject.getString("url");
+                this.headline= jsonObject.getString("title");
+                if(multimedia.length() >0){
+                    JSONObject multimediaJson= multimedia.getJSONObject(0);
+                    this.thumbNail= multimediaJson.getString("url");
+                }else{
+                    this.thumbNail= "";
+                }
             }
         } catch(JSONException e){
 
