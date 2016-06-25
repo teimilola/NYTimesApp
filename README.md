@@ -33,10 +33,6 @@ The following **optional** features are implemented:
 * [x] Hides the `Toolbar` at the top as the user scrolls down through the results using the [CoordinatorLayout and AppBarLayout](http://guides.codepath.com/android/Using-the-App-ToolBar#reacting-to-scroll).
 * [ ] Leverage the popular [GSON library](http://guides.codepath.com/android/Using-Android-Async-Http-Client#decoding-with-gson-library) to streamline the parsing of JSON data and avoid manual parsing.
 
-The following **additional** features are implemented:
-
-* [x] Implemented Swipe Down To Refresh when showing Top Stories
-
 
 ## Video Walkthrough
 
