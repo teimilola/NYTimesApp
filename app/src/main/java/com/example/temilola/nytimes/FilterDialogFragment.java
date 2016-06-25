@@ -15,7 +15,6 @@ import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -87,7 +86,7 @@ public class FilterDialogFragment extends DialogFragment implements DatePickerDi
         etDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"Date Clicked!", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getContext(),"Date Clicked!", Toast.LENGTH_SHORT).show();
             //showDatePickerDialog(v);
                 /*DatePickerBuilder dpb = new DatePickerBuilder()
                         .setFragmentManager(getChildFragmentManager())
