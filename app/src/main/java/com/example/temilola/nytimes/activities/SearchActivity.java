@@ -83,7 +83,7 @@ public class SearchActivity extends AppCompatActivity implements FilterDialogFra
         layout.setGapStrategy(StaggeredGridLayoutManager.GAP_HANDLING_NONE);
         rvArticle.setLayoutManager(layout);
 
-        SpacesItemDecoration decoration = new SpacesItemDecoration(16);
+        SpacesItemDecoration decoration = new SpacesItemDecoration(12);
         rvArticle.addItemDecoration(decoration);
         rvArticle.setItemAnimator(new SlideInUpAnimator());
 

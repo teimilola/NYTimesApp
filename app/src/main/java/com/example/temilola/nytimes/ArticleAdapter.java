@@ -103,7 +103,7 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHold
 
 
             Glide.with(getContext()).load(thumbNail).bitmapTransform(new RoundedCornersTransformation(getContext(),10, 10))
-                    .fitCenter().placeholder(R.drawable.placeholder).into(ivImage);
+                    .fitCenter().into(ivImage);
         }
         else{
             Glide.with(getContext()).load(R.drawable.news_anchors).asGif().fitCenter().into(ivImage);
